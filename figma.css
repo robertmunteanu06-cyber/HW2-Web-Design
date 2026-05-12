@@ -1,0 +1,138 @@
+
+:root {
+    --color-primary: #d4a017;
+    --color-secondary: #003366;
+    --color-bg-light: #f4f4f9;
+    --color-text-muted: #666666;
+    --font-main: Arial, sans-serif;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+
+
+body {
+    background-color: var(--color-bg-light);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-frame {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Partea Stângă: Formularul */
+.auth-form-panel {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-form-panel h2 {
+    color: var(--color-secondary);
+    margin: 0 0 5px 0;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.form-options a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+
+.auth-info-panel {
+    flex: 1;
+    background-color: var(--color-secondary); 
+    background-image: url('Screen Shot 2024-06-17 at 12.44.28.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-info-panel img {
+    width: 130px;
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+
+.auth-info-panel p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
