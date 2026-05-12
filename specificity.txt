@@ -1,0 +1,14 @@
+Exercise 1 - Specificity Game Answers
+
+1. Properties for each paragraph:
+- Paragraph A: Receives all its properties (color, font-size, font-family, line-height, padding) strictly from the 'p' element selector.
+- Paragraph B: Receives line-height from the 'p' element selector, but color, font-size, background-color, padding, border-left, and font-family are overridden and applied by the '.info' class selector (because class has higher specificity than element).
+- Paragraph C: Receives line-height from the 'p' element selector, but all other properties (color, font-size, font-style, padding, border, background-color, font-family, etc.) are applied by the '#warning' ID selector (because ID has higher specificity than both class and element).
+
+2. Paragraph D Analysis:
+- Color: The browser uses "darkorange". This comes from the '#warning.info' rule. Specificity is calculated by weight. The '#warning.info' selector has 1 ID and 1 Class (specificity 1,1,0), which beats the '#warning' selector that only has 1 ID (specificity 1,0,0). 
+- Font-family: The browser uses "'Courier New', monospace". The '#warning.info' rule does not specify a font-family, so the browser looks for the next highest specificity rule that does. The '#warning' ID selector (specificity 1,0,0) beats the '.info' class selector (specificity 0,1,0) and the 'p' element selector (0,0,1). 
+
+3. H1 CSS Placement Experiment:
+When I define the H1 color in the external style.css (e.g., color: blue), define it again in the internal <style> tag (e.g., color: green), and define it a third time inline (e.g., style="color: purple;"), the H1 turns purple. 
+Explanation: This happens due to the cascade and specificity rules. Inline CSS has the absolute highest specificity and overrides both internal and external CSS. If the inline style is removed, the internal style usually wins over the external style simply because it is read later in the HTML document (assuming the <style> block is placed after the <link> tag).
